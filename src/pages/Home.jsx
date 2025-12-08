@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CourseGrid from '../components/CourseGrid';
+import EducationalBackground3D from '../components/EducationalBackground3D';
 import { courseAPI } from '../utils/api';
 import './Home.css';
 
@@ -78,6 +79,7 @@ const Home = () => {
         <>
             {/* Hero Section */}
             <section className="hero">
+                <EducationalBackground3D />
                 <div className="container">
                     <div className="hero-content">
                         <h1 className="hero-title">

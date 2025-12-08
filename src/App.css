@@ -13,6 +13,7 @@
   padding: var(--spacing-2xl) 0;
   position: relative;
   overflow: hidden;
+  min-height: 600px;
 }
 
 .hero::before {

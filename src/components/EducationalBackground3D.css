@@ -1,0 +1,842 @@
+.educational-bg-3d {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    perspective: 1000px;
+    z-index: 0;
+}
+
+.floating-element {
+    position: absolute;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform-style: preserve-3d;
+}
+
+/* ========== BOOKS ========== */
+.book {
+    width: 60px;
+    height: 80px;
+}
+
+.book-cover {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    transform-style: preserve-3d;
+}
+
+.book-cover::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.book-spine {
+    position: absolute;
+    right: -8px;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    background: linear-gradient(90deg, #5568d3 0%, #6b5b95 100%);
+    border-radius: 0 4px 4px 0;
+}
+
+.book-1 {
+    top: 15%;
+    left: 10%;
+    animation: float-rotate-1 20s infinite;
+}
+
+.book-2 {
+    top: 60%;
+    right: 15%;
+    animation: float-rotate-2 25s infinite;
+}
+
+.book-3 {
+    bottom: 20%;
+    left: 20%;
+    animation: float-rotate-3 18s infinite;
+}
+
+/* ========== GRADUATION CAPS ========== */
+.grad-cap {
+    width: 70px;
+    height: 70px;
+}
+
+.cap-top {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    box-shadow: 0 10px 30px rgba(240, 147, 251, 0.4);
+}
+
+.cap-tassel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 30px;
+    background: linear-gradient(180deg, #f5576c 0%, #feca57 100%);
+    transform: translate(-50%, -50%);
+}
+
+.cap-tassel::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: #feca57;
+    border-radius: 50%;
+}
+
+.cap-1 {
+    top: 25%;
+    right: 20%;
+    animation: float-spin-1 22s infinite;
+}
+
+.cap-2 {
+    bottom: 30%;
+    right: 10%;
+    animation: float-spin-2 28s infinite;
+}
+
+/* ========== ATOMS ========== */
+.atom {
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+
+.nucleus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background: radial-gradient(circle, #4facfe 0%, #00f2fe 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(79, 172, 254, 0.8);
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid rgba(79, 172, 254, 0.4);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+}
+
+.orbit-1 {
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    animation: orbit-rotate-1 4s linear infinite;
+}
+
+.orbit-2 {
+    width: 70px;
+    height: 70px;
+    margin: -35px 0 0 -35px;
+    animation: orbit-rotate-2 5s linear infinite;
+    transform: rotateY(60deg);
+}
+
+.orbit-3 {
+    width: 80px;
+    height: 80px;
+    margin: -40px 0 0 -40px;
+    animation: orbit-rotate-3 6s linear infinite;
+    transform: rotateX(60deg);
+}
+
+.orbit::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background: #00f2fe;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.8);
+}
+
+.atom-1 {
+    top: 40%;
+    left: 15%;
+    animation: float-3d-1 15s infinite;
+}
+
+.atom-2 {
+    top: 70%;
+    right: 25%;
+    animation: float-3d-2 18s infinite;
+}
+
+/* ========== LIGHT BULBS ========== */
+.lightbulb {
+    width: 50px;
+    height: 70px;
+    position: relative;
+}
+
+.bulb-glass {
+    width: 40px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 235, 59, 0.6) 100%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: relative;
+    box-shadow: 0 0 30px rgba(255, 235, 59, 0.6);
+}
+
+.bulb-base {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 15px;
+    background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+    border-radius: 0 0 4px 4px;
+}
+
+.bulb-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(255, 235, 59, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.bulb-1 {
+    top: 10%;
+    right: 30%;
+    animation: float-swing-1 12s infinite;
+}
+
+.bulb-2 {
+    bottom: 15%;
+    left: 30%;
+    animation: float-swing-2 14s infinite;
+}
+
+/* ========== MATH SYMBOLS ========== */
+.math-symbol {
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 4px 8px rgba(250, 112, 154, 0.3));
+    font-family: 'Georgia', serif;
+}
+
+.symbol-1 {
+    top: 20%;
+    left: 25%;
+    animation: float-bounce-1 10s infinite;
+}
+
+.symbol-2 {
+    top: 50%;
+    right: 30%;
+    animation: float-bounce-2 12s infinite;
+}
+
+.symbol-3 {
+    bottom: 25%;
+    right: 35%;
+    animation: float-bounce-3 11s infinite;
+}
+
+.symbol-4 {
+    top: 65%;
+    left: 35%;
+    animation: float-bounce-4 13s infinite;
+}
+
+/* ========== GEOMETRIC SHAPES ========== */
+.geo-shape {
+    width: 60px;
+    height: 60px;
+}
+
+/* Cube */
+.cube-1 {
+    top: 35%;
+    right: 12%;
+    animation: cube-rotate 20s infinite linear;
+}
+
+.cube-face {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.8) 0%, rgba(0, 191, 255, 0.6) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.cube-face.front {
+    transform: rotateY(0deg) translateZ(30px);
+}
+
+.cube-face.back {
+    transform: rotateY(180deg) translateZ(30px);
+}
+
+.cube-face.left {
+    transform: rotateY(-90deg) translateZ(30px);
+}
+
+.cube-face.right {
+    transform: rotateY(90deg) translateZ(30px);
+}
+
+.cube-face.top {
+    transform: rotateX(90deg) translateZ(30px);
+}
+
+.cube-face.bottom {
+    transform: rotateX(-90deg) translateZ(30px);
+}
+
+/* Pyramid */
+.pyramid-1 {
+    bottom: 35%;
+    left: 12%;
+    animation: pyramid-rotate 18s infinite linear;
+}
+
+.pyramid-face {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.pyramid-face.base {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(255, 99, 71, 0.7) 0%, rgba(255, 140, 0, 0.6) 100%);
+    transform: rotateX(-90deg) translateZ(-30px);
+}
+
+.pyramid-face.side1,
+.pyramid-face.side2,
+.pyramid-face.side3,
+.pyramid-face.side4 {
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 50px solid rgba(255, 99, 71, 0.7);
+}
+
+.pyramid-face.side1 {
+    transform: rotateY(0deg) translateZ(30px) rotateX(45deg);
+}
+
+.pyramid-face.side2 {
+    transform: rotateY(90deg) translateZ(30px) rotateX(45deg);
+}
+
+.pyramid-face.side3 {
+    transform: rotateY(180deg) translateZ(30px) rotateX(45deg);
+}
+
+.pyramid-face.side4 {
+    transform: rotateY(270deg) translateZ(30px) rotateX(45deg);
+}
+
+/* ========== PARTICLES ========== */
+.particle {
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(138, 43, 226, 0.4) 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.6);
+}
+
+/* Distribute particles */
+.particle-1 {
+    top: 10%;
+    left: 5%;
+    animation: particle-float-1 8s infinite;
+}
+
+.particle-2 {
+    top: 15%;
+    left: 15%;
+    animation: particle-float-2 9s infinite;
+}
+
+.particle-3 {
+    top: 20%;
+    left: 25%;
+    animation: particle-float-3 7s infinite;
+}
+
+.particle-4 {
+    top: 25%;
+    left: 35%;
+    animation: particle-float-1 10s infinite;
+}
+
+.particle-5 {
+    top: 30%;
+    left: 45%;
+    animation: particle-float-2 8.5s infinite;
+}
+
+.particle-6 {
+    top: 35%;
+    left: 55%;
+    animation: particle-float-3 9.5s infinite;
+}
+
+.particle-7 {
+    top: 40%;
+    left: 65%;
+    animation: particle-float-1 7.5s infinite;
+}
+
+.particle-8 {
+    top: 45%;
+    left: 75%;
+    animation: particle-float-2 11s infinite;
+}
+
+.particle-9 {
+    top: 50%;
+    left: 85%;
+    animation: particle-float-3 8s infinite;
+}
+
+.particle-10 {
+    top: 55%;
+    left: 95%;
+    animation: particle-float-1 9s infinite;
+}
+
+.particle-11 {
+    top: 60%;
+    left: 8%;
+    animation: particle-float-2 10s infinite;
+}
+
+.particle-12 {
+    top: 65%;
+    left: 18%;
+    animation: particle-float-3 7s infinite;
+}
+
+.particle-13 {
+    top: 70%;
+    left: 28%;
+    animation: particle-float-1 8.5s infinite;
+}
+
+.particle-14 {
+    top: 75%;
+    left: 38%;
+    animation: particle-float-2 9.5s infinite;
+}
+
+.particle-15 {
+    top: 80%;
+    left: 48%;
+    animation: particle-float-3 11s infinite;
+}
+
+.particle-16 {
+    top: 85%;
+    left: 58%;
+    animation: particle-float-1 7.5s infinite;
+}
+
+.particle-17 {
+    top: 90%;
+    left: 68%;
+    animation: particle-float-2 10s infinite;
+}
+
+.particle-18 {
+    top: 12%;
+    left: 78%;
+    animation: particle-float-3 8s infinite;
+}
+
+.particle-19 {
+    top: 42%;
+    left: 88%;
+    animation: particle-float-1 9s infinite;
+}
+
+.particle-20 {
+    top: 72%;
+    left: 12%;
+    animation: particle-float-2 8.5s infinite;
+}
+
+/* ========== ANIMATIONS ========== */
+
+/* Float and Rotate */
+@keyframes float-rotate-1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    25% {
+        transform: translate(30px, -40px) rotateX(180deg) rotateY(90deg) rotateZ(45deg);
+    }
+
+    50% {
+        transform: translate(-20px, -80px) rotateX(360deg) rotateY(180deg) rotateZ(90deg);
+    }
+
+    75% {
+        transform: translate(40px, -40px) rotateX(180deg) rotateY(270deg) rotateZ(135deg);
+    }
+}
+
+@keyframes float-rotate-2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    33% {
+        transform: translate(-40px, -50px) rotateX(120deg) rotateY(120deg) rotateZ(60deg);
+    }
+
+    66% {
+        transform: translate(20px, -100px) rotateX(240deg) rotateY(240deg) rotateZ(120deg);
+    }
+}
+
+@keyframes float-rotate-3 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    50% {
+        transform: translate(-30px, -60px) rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    }
+}
+
+/* Float and Spin */
+@keyframes float-spin-1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotateZ(0deg);
+    }
+
+    25% {
+        transform: translate(-30px, -50px) rotateZ(90deg);
+    }
+
+    50% {
+        transform: translate(20px, -100px) rotateZ(180deg);
+    }
+
+    75% {
+        transform: translate(-40px, -50px) rotateZ(270deg);
+    }
+}
+
+@keyframes float-spin-2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotateZ(0deg);
+    }
+
+    50% {
+        transform: translate(30px, -70px) rotateZ(360deg);
+    }
+}
+
+/* 3D Float */
+@keyframes float-3d-1 {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg);
+    }
+
+    33% {
+        transform: translate3d(40px, -60px, 50px) rotateX(120deg) rotateY(120deg);
+    }
+
+    66% {
+        transform: translate3d(-30px, -120px, -30px) rotateX(240deg) rotateY(240deg);
+    }
+}
+
+@keyframes float-3d-2 {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg);
+    }
+
+    50% {
+        transform: translate3d(-50px, -80px, 40px) rotateX(180deg) rotateY(180deg);
+    }
+}
+
+/* Swing */
+@keyframes float-swing-1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(20px, -40px) rotate(15deg);
+    }
+
+    50% {
+        transform: translate(-10px, -80px) rotate(-10deg);
+    }
+
+    75% {
+        transform: translate(30px, -40px) rotate(20deg);
+    }
+}
+
+@keyframes float-swing-2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-25px, -60px) rotate(-15deg);
+    }
+}
+
+/* Bounce */
+@keyframes float-bounce-1 {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    25% {
+        transform: translateY(-50px) scale(1.1);
+    }
+
+    50% {
+        transform: translateY(-100px) scale(1);
+    }
+
+    75% {
+        transform: translateY(-50px) scale(0.9);
+    }
+}
+
+@keyframes float-bounce-2 {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-80px) scale(1.15);
+    }
+}
+
+@keyframes float-bounce-3 {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-70px) scale(1.1) rotate(180deg);
+    }
+}
+
+@keyframes float-bounce-4 {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-90px) scale(1.2) rotate(-180deg);
+    }
+}
+
+/* Cube Rotation */
+@keyframes cube-rotate {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+/* Pyramid Rotation */
+@keyframes pyramid-rotate {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+/* Orbit Rotations */
+@keyframes orbit-rotate-1 {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes orbit-rotate-2 {
+    0% {
+        transform: rotateY(60deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateY(60deg) rotateZ(360deg);
+    }
+}
+
+@keyframes orbit-rotate-3 {
+    0% {
+        transform: rotateX(60deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(60deg) rotateZ(360deg);
+    }
+}
+
+/* Glow Pulse */
+@keyframes glow-pulse {
+
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+/* Particle Float */
+@keyframes particle-float-1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translate(20px, -100px);
+        opacity: 1;
+    }
+}
+
+@keyframes particle-float-2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: translate(-30px, -120px);
+        opacity: 1;
+    }
+}
+
+@keyframes particle-float-3 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translate(15px, -90px);
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .book,
+    .grad-cap,
+    .atom,
+    .lightbulb,
+    .geo-shape {
+        transform: scale(0.7);
+    }
+
+    .math-symbol {
+        font-size: 32px;
+    }
+
+    .particle {
+        width: 3px;
+        height: 3px;
+    }
+}
