@@ -6,6 +6,7 @@ import { CartProvider } from './context/CartContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AuthModal from './components/AuthModal';
+import AIAssistantButton from './components/AIAssistantButton';
 import Home from './pages/Home';
 import CourseDetails from './components/CourseDetails';
 import MyLearning from './pages/MyLearning';
@@ -55,6 +56,7 @@ function App() {
                 onClose={handleCloseAuth}
                 initialMode={authMode}
               />
+              <AIAssistantButton />
             </div>
           </Router>
         </CartProvider>
