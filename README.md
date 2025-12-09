@@ -17,6 +17,7 @@ A modern, full-stack educational platform built with React and Node.js, featurin
 - **Meditation Zone**: Audio-guided meditation sessions with progress tracking
 - **Study Pressure Management**: Pomodoro timer and curated study tips
 - **Motivational Resources**: Daily quotes and affirmations
+- **24/7 Mock Counsellor Call**: Simulated support calls with pulsing avatar, timer, and randomized motivational messages
 - **Standalone Architecture**: Runs on a dedicated Express/EJS server for optimal performance
 
 ### 🔐 Authentication System

@@ -48,6 +48,83 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+
+    // Mock Call Functionality
+    const talkBtn = document.getElementById('talkBtn');
+    const callModal = document.getElementById('callModal');
+    const endCallBtn = document.getElementById('endCallBtn');
+    const callStatus = document.getElementById('callStatus');
+    const callMessage = document.getElementById('callMessage');
+    const callTimer = document.getElementById('callTimer');
+
+    let callInterval;
+    let callSeconds = 0;
+
+    const motivationalMessages = [
+        "You are stronger than you think. Take it one step at a time.",
+        "It's okay to not be okay. We are here to listen.",
+        "Your feelings are valid. Be kind to yourself today.",
+        "Every storm runs out of rain. This too shall pass.",
+        "You have survived 100% of your bad days. You got this.",
+        "Rest if you must, but don't you quit. We believe in you.",
+        "Focus on the present moment. Just breathe."
+    ];
+
+    if (talkBtn && callModal) {
+        talkBtn.addEventListener('click', () => {
+            startMockCall();
+        });
+
+        endCallBtn.addEventListener('click', () => {
+            endMockCall();
+        });
+    }
+
+    function startMockCall() {
+        callModal.style.display = 'flex';
+        callStatus.textContent = 'Connecting...';
+        callMessage.style.display = 'none';
+        callMessage.textContent = '';
+        callSeconds = 0;
+        callTimer.textContent = '00:00';
+
+        // Disable end call initially to prevent accidental clicks
+        endCallBtn.style.opacity = '0.5';
+        endCallBtn.style.pointerEvents = 'none';
+        setTimeout(() => {
+            endCallBtn.style.opacity = '1';
+            endCallBtn.style.pointerEvents = 'auto';
+        }, 1000);
+
+        // Simulate connection delay
+        setTimeout(() => {
+            callStatus.textContent = 'Connected';
+            startTimer();
+
+            // Show message after a short delay
+            setTimeout(() => {
+                const randomMessage = motivationalMessages[Math.floor(Math.random() * motivationalMessages.length)];
+                callMessage.textContent = `"${randomMessage}"`;
+                callMessage.style.display = 'block';
+            }, 1500);
+
+        }, 2000);
+    }
+
+    function endMockCall() {
+        clearInterval(callInterval);
+        callModal.style.display = 'none';
+    }
+
+    function startTimer() {
+        clearInterval(callInterval);
+        callInterval = setInterval(() => {
+            callSeconds++;
+            const mins = Math.floor(callSeconds / 60);
+            const secs = callSeconds % 60;
+            callTimer.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }, 1000);
+    }
 });
 
 // Utility function to format time
