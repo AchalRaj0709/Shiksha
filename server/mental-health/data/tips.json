@@ -1,0 +1,214 @@
+{
+    "tips": [
+        {
+            "id": 1,
+            "category": "Time Management",
+            "title": "Use the Pomodoro Technique",
+            "description": "Study for 25 minutes, then take a 5-minute break. After 4 cycles, take a longer 15-30 minute break.",
+            "icon": "⏰"
+        },
+        {
+            "id": 2,
+            "category": "Time Management",
+            "title": "Prioritize Your Tasks",
+            "description": "Use the Eisenhower Matrix: categorize tasks by urgency and importance. Focus on important tasks first.",
+            "icon": "📋"
+        },
+        {
+            "id": 3,
+            "category": "Time Management",
+            "title": "Create a Study Schedule",
+            "description": "Plan your study sessions in advance. Consistency helps build productive habits.",
+            "icon": "📅"
+        },
+        {
+            "id": 4,
+            "category": "Stress Relief",
+            "title": "Practice Deep Breathing",
+            "description": "When stressed, try the 4-7-8 breathing technique: breathe in for 4 seconds, hold for 7, exhale for 8.",
+            "icon": "🌬️"
+        },
+        {
+            "id": 5,
+            "category": "Stress Relief",
+            "title": "Take Regular Breaks",
+            "description": "Your brain needs rest to consolidate information. Short breaks improve focus and retention.",
+            "icon": "☕"
+        },
+        {
+            "id": 6,
+            "category": "Stress Relief",
+            "title": "Exercise Regularly",
+            "description": "Physical activity reduces stress hormones and improves mood. Even a 10-minute walk helps.",
+            "icon": "🏃"
+        },
+        {
+            "id": 7,
+            "category": "Stress Relief",
+            "title": "Get Enough Sleep",
+            "description": "Aim for 7-9 hours of sleep. Sleep is crucial for memory consolidation and cognitive function.",
+            "icon": "😴"
+        },
+        {
+            "id": 8,
+            "category": "Focus Techniques",
+            "title": "Eliminate Distractions",
+            "description": "Turn off notifications, use website blockers, and create a dedicated study space.",
+            "icon": "🔕"
+        },
+        {
+            "id": 9,
+            "category": "Focus Techniques",
+            "title": "Use Active Recall",
+            "description": "Test yourself regularly instead of just re-reading. This strengthens memory pathways.",
+            "icon": "🧠"
+        },
+        {
+            "id": 10,
+            "category": "Focus Techniques",
+            "title": "Study in Short Bursts",
+            "description": "Your brain retains information better in 20-50 minute sessions rather than marathon study sessions.",
+            "icon": "⚡"
+        },
+        {
+            "id": 11,
+            "category": "Focus Techniques",
+            "title": "Use the Feynman Technique",
+            "description": "Explain concepts in simple terms as if teaching someone else. This reveals gaps in understanding.",
+            "icon": "👨‍🏫"
+        },
+        {
+            "id": 12,
+            "category": "Mindset",
+            "title": "Embrace Mistakes",
+            "description": "Mistakes are learning opportunities. They help your brain form stronger connections.",
+            "icon": "💡"
+        },
+        {
+            "id": 13,
+            "category": "Mindset",
+            "title": "Practice Self-Compassion",
+            "description": "Be kind to yourself. Negative self-talk increases stress and reduces performance.",
+            "icon": "❤️"
+        },
+        {
+            "id": 14,
+            "category": "Mindset",
+            "title": "Set Realistic Goals",
+            "description": "Break large goals into smaller, achievable milestones. Celebrate small wins.",
+            "icon": "🎯"
+        },
+        {
+            "id": 15,
+            "category": "Mindset",
+            "title": "Visualize Success",
+            "description": "Spend a few minutes visualizing yourself succeeding. This primes your brain for achievement.",
+            "icon": "✨"
+        },
+        {
+            "id": 16,
+            "category": "Health",
+            "title": "Stay Hydrated",
+            "description": "Dehydration impairs cognitive function. Keep water nearby while studying.",
+            "icon": "💧"
+        },
+        {
+            "id": 17,
+            "category": "Health",
+            "title": "Eat Brain-Boosting Foods",
+            "description": "Include nuts, berries, fish, and dark chocolate in your diet for better brain function.",
+            "icon": "🥗"
+        },
+        {
+            "id": 18,
+            "category": "Health",
+            "title": "Limit Caffeine",
+            "description": "While caffeine can help focus, too much causes anxiety and disrupts sleep. Moderate your intake.",
+            "icon": "☕"
+        },
+        {
+            "id": 19,
+            "category": "Study Techniques",
+            "title": "Use Spaced Repetition",
+            "description": "Review material at increasing intervals. This is proven to improve long-term retention.",
+            "icon": "📚"
+        },
+        {
+            "id": 20,
+            "category": "Study Techniques",
+            "title": "Create Mind Maps",
+            "description": "Visual organization helps you see connections between concepts and improves recall.",
+            "icon": "🗺️"
+        },
+        {
+            "id": 21,
+            "category": "Study Techniques",
+            "title": "Teach Others",
+            "description": "Explaining concepts to peers reinforces your own understanding and reveals knowledge gaps.",
+            "icon": "👥"
+        },
+        {
+            "id": 22,
+            "category": "Study Techniques",
+            "title": "Use Multiple Resources",
+            "description": "Different perspectives on the same topic deepen understanding and make learning more engaging.",
+            "icon": "📖"
+        },
+        {
+            "id": 23,
+            "category": "Environment",
+            "title": "Optimize Your Study Space",
+            "description": "Good lighting, comfortable temperature, and minimal clutter improve focus and productivity.",
+            "icon": "🏠"
+        },
+        {
+            "id": 24,
+            "category": "Environment",
+            "title": "Use Background Music Wisely",
+            "description": "Instrumental music or nature sounds can help some people focus. Experiment to find what works for you.",
+            "icon": "🎵"
+        },
+        {
+            "id": 25,
+            "category": "Social",
+            "title": "Join Study Groups",
+            "description": "Collaborative learning provides motivation, different perspectives, and accountability.",
+            "icon": "👫"
+        },
+        {
+            "id": 26,
+            "category": "Social",
+            "title": "Talk to Someone",
+            "description": "When feeling overwhelmed, talk to friends, family, or a counselor. You're not alone.",
+            "icon": "💬"
+        },
+        {
+            "id": 27,
+            "category": "Balance",
+            "title": "Make Time for Hobbies",
+            "description": "Engaging in activities you enjoy reduces stress and prevents burnout.",
+            "icon": "🎨"
+        },
+        {
+            "id": 28,
+            "category": "Balance",
+            "title": "Practice Gratitude",
+            "description": "Write down three things you're grateful for each day. This improves mood and reduces stress.",
+            "icon": "🙏"
+        },
+        {
+            "id": 29,
+            "category": "Exam Prep",
+            "title": "Start Early",
+            "description": "Cramming is ineffective. Start reviewing material weeks before exams for better retention.",
+            "icon": "📆"
+        },
+        {
+            "id": 30,
+            "category": "Exam Prep",
+            "title": "Practice Past Papers",
+            "description": "Familiarize yourself with exam format and question types. This reduces anxiety and improves performance.",
+            "icon": "📝"
+        }
+    ]
+}

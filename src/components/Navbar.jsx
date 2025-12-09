@@ -3,6 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import { courseAPI } from '../utils/api';
 import logo from '../assets/shiksha_logo.png';
+import MindEaseButton from './MindEaseButton';
 import './Navbar.css';
 
 function Navbar({ onOpenAuth }) {
@@ -217,6 +218,9 @@ function Navbar({ onOpenAuth }) {
                 <div className="navbar-actions">
                     {isAuthenticated ? (
                         <>
+                            {/* MindEase Button */}
+                            <MindEaseButton />
+
                             {/* Cart */}
                             <button
                                 className="icon-btn"

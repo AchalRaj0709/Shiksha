@@ -1,0 +1,31 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-brand">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="url(#logo-gradient)" stroke-width="1.5" fill="none" />
+                <path d="M12 6C12 6 9 9 9 12C9 14 10.5 15.5 12 15.5C13.5 15.5 15 14 15 12C15 9 12 6 12 6Z"
+                    fill="url(#logo-gradient)" />
+                <defs>
+                    <linearGradient id="logo-gradient" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#A78BFA" />
+                        <stop offset="0.5" stop-color="#7DD3FC" />
+                        <stop offset="1" stop-color="#86EFAC" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span class="brand-text">MindEase</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/wellbeing" class="<%= page === 'dashboard' ? 'active' : '' %>">Dashboard</a></li>
+            <li><a href="/wellbeing/breathing" class="<%= page === 'breathing' ? 'active' : '' %>">Breathe</a></li>
+            <li><a href="/wellbeing/meditation" class="<%= page === 'meditation' ? 'active' : '' %>">Meditate</a></li>
+            <li><a href="/wellbeing/tips" class="<%= page === 'tips' ? 'active' : '' %>">Tips</a></li>
+            <li><a href="/wellbeing/quotes" class="<%= page === 'quotes' ? 'active' : '' %>">Quotes</a></li>
+        </ul>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>

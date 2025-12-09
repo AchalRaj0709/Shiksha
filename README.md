@@ -1,6 +1,6 @@
 # 🎓 Shiksha - Educational Learning Platform
 
-A modern, full-stack educational platform built with React and Node.js, featuring comprehensive authentication, course management, and a premium UI/UX design inspired by Udemy.
+A modern, full-stack educational platform built with React and Node.js, featuring comprehensive authentication, course management, and a premium UI/UX design. Now includes **MindEase**, a dedicated mental wellness module for students.
 
 ## ✨ Features
 
@@ -11,6 +11,13 @@ A modern, full-stack educational platform built with React and Node.js, featurin
 - **Category Navigation**: Horizontal scrollable category filter
 - **Search Functionality**: Integrated search across the platform
 - **Smooth Animations**: Professional micro-interactions and hover effects
+
+### 🧘 MindEase (Mental Health Module)
+- **Breathing Exercises**: Interactive 4-7-8 breathing technique with visual guidance
+- **Meditation Zone**: Audio-guided meditation sessions with progress tracking
+- **Study Pressure Management**: Pomodoro timer and curated study tips
+- **Motivational Resources**: Daily quotes and affirmations
+- **Standalone Architecture**: Runs on a dedicated Express/EJS server for optimal performance
 
 ### 🔐 Authentication System
 - **User Registration & Login**: Secure JWT-based authentication
@@ -40,21 +47,30 @@ A modern, full-stack educational platform built with React and Node.js, featurin
 
 #### 1. Clone the repository
 ```bash
+git clone <repository-url>
 cd Shiksha
 ```
 
-#### 2. Install Frontend Dependencies
+#### 2. Install Dependencies
+
+**Frontend:**
 ```bash
 npm install
 ```
 
-#### 3. Install Backend Dependencies
+**Main Backend:**
 ```bash
 cd server
 npm install
 ```
 
-#### 4. Configure Environment Variables
+**Mental Health Module:**
+```bash
+cd mental-health
+npm install
+```
+
+#### 3. Configure Environment Variables
 
 Create a `.env` file in the `server` directory:
 
@@ -62,6 +78,7 @@ Create a `.env` file in the `server` directory:
 # Environment
 NODE_ENV=development
 PORT=5000
+MENTAL_HEALTH_PORT=3001
 
 # MongoDB
 MONGODB_URI=mongodb://localhost:27017/shiksha
@@ -93,76 +110,64 @@ RATE_LIMIT_WINDOW_MS=900000
 RATE_LIMIT_MAX_REQUESTS=100
 ```
 
-#### 5. Start MongoDB
-```bash
-# If using local MongoDB
-mongod
+#### 4. Start the Application
 
-# If using MongoDB Atlas, just ensure your connection string is correct in .env
-```
+You need to run 3 separate terminals:
 
-#### 6. Start the Backend Server
+**Terminal 1 (Main Backend):**
 ```bash
 cd server
 npm run dev
 ```
+(Runs on port 5000)
 
-The server will start on `http://localhost:5000`
-
-#### 7. Start the Frontend
+**Terminal 2 (Mental Health Server):**
 ```bash
-# In a new terminal, from the root directory
+cd server/mental-health
 npm run dev
 ```
+(Runs on port 3001)
 
-The frontend will start on `http://localhost:5173`
+**Terminal 3 (Frontend):**
+```bash
+# From root directory
+npm run dev
+```
+(Runs on port 5173)
+
+Open `http://localhost:5173` to access the main application.  
+The MindEase module is accessible via the navbar button or directly at `http://localhost:3001/wellbeing`.
 
 ## 📁 Project Structure
 
 ```
 Shiksha/
-├── server/                    # Backend (Node.js + Express)
-│   ├── config/
-│   │   └── db.js             # MongoDB connection
-│   ├── middleware/
-│   │   ├── auth.js           # Authentication middleware
-│   │   └── rateLimiter.js    # Rate limiting
-│   ├── models/
-│   │   └── User.js           # User model with auth features
-│   ├── routes/
-│   │   └── auth.js           # Authentication routes
-│   ├── utils/
-│   │   ├── email.js          # Email sending utilities
-│   │   └── jwt.js            # JWT utilities
-│   ├── .env                  # Environment variables
-│   ├── .gitignore
-│   ├── index.js              # Server entry point
-│   └── package.json
+├── server/                    # Backend Services
+│   ├── mental-health/        # MindEase Module (Express + EJS)
+│   │   ├── data/             # JSON data (quotes, tips, meditations)
+│   │   ├── public/           # Static assets (css, js)
+│   │   ├── views/            # EJS Templates
+│   │   └── server.js         # Module entry point
+│   │
+│   ├── config/               # Database config
+│   ├── middleware/           # Auth & rate limiters
+│   ├── models/               # Mongoose models
+│   ├── routes/               # API routes
+│   ├── utils/                # Helpers (email, jwt)
+│   ├── .env                  # Environment config
+│   └── index.js              # Main server entry point
 │
 ├── src/                       # Frontend (React + Vite)
-│   ├── components/
-│   │   ├── AuthModal.jsx     # Login/Signup modal
-│   │   ├── AuthModal.css
-│   │   ├── CategoryNav.jsx   # Category navigation
-│   │   ├── CategoryNav.css
-│   │   ├── CourseCard.jsx    # Course card component
-│   │   ├── CourseCard.css
-│   │   ├── CourseGrid.jsx    # Course grid layout
-│   │   ├── CourseGrid.css
-│   │   ├── Navbar.jsx        # Navigation bar
-│   │   └── Navbar.css
-│   ├── context/
-│   │   └── AuthContext.jsx   # Authentication state management
-│   ├── utils/
-│   │   └── api.js            # API utilities with axios
-│   ├── App.jsx               # Main app component
-│   ├── App.css
-│   ├── index.css             # Global styles & design system
+│   ├── components/           # React components
+│   │   ├── MindEaseButton.jsx # Entry to wellness module
+│   │   └── ...
+│   ├── context/              # Global state
+│   ├── utils/                # Frontend utilities
+│   ├── App.jsx               # Main component
 │   └── main.jsx
 │
 ├── index.html
 ├── package.json
-├── vite.config.js
 └── README.md
 ```
 
@@ -171,132 +176,26 @@ Shiksha/
 ### Authentication
 - `POST /api/auth/register` - Register new user
 - `POST /api/auth/login` - Login user
-- `GET /api/auth/me` - Get current user (protected)
-- `POST /api/auth/logout` - Logout user (protected)
-- `POST /api/auth/refresh-token` - Refresh access token
+- `GET /api/auth/me` - Get current user
+- `POST /api/auth/logout` - Logout user
 
-### Email Verification
-- `POST /api/auth/verify-email/:token` - Verify email address
-- `POST /api/auth/resend-verification` - Resend verification email (protected)
-
-### Password Reset
-- `POST /api/auth/forgot-password` - Request password reset
-- `POST /api/auth/reset-password/:token` - Reset password
-
-### Two-Factor Authentication
-- `POST /api/auth/2fa/setup` - Setup 2FA (protected)
-- `POST /api/auth/2fa/verify` - Verify and enable 2FA (protected)
-- `POST /api/auth/2fa/disable` - Disable 2FA (protected)
-
-## 🎯 Usage
-
-### User Registration
-1. Click "Sign Up" button in the navbar
-2. Fill in name, email, and password
-3. Submit the form
-4. Check email for verification link
-5. Click verification link to activate account
-
-### User Login
-1. Click "Sign In" button
-2. Enter email and password
-3. If 2FA is enabled, enter 6-digit code
-4. Successfully logged in
-
-### Enable 2FA
-1. Login to your account
-2. Go to Account Settings
-3. Click "Enable 2FA"
-4. Scan QR code with authenticator app (Google Authenticator, Authy, etc.)
-5. Enter verification code
-6. Save backup codes securely
-
-### Password Reset
-1. Click "Forgot Password" on login page
-2. Enter your email address
-3. Check email for reset link
-4. Click link and enter new password
-5. Login with new password
+### Wellness API (Mental Health Module)
+- `GET /api/quotes` - Get random motivational quote
+- `GET /api/tips` - Get study tips (supports ?shuffle=true)
+- `GET /api/meditations` - Get all meditation sessions
 
 ## 🎨 Design System
 
 ### Colors
-- **Primary**: `#a435f0` (Purple)
-- **Secondary**: `#5624d0` (Dark Purple)
-- **Accent**: `#f3722c` (Orange)
-- **Success**: `#0cce6b` (Green)
-- **Warning**: `#f4c430` (Yellow)
+- **Primary**: `#a435f0` (Purple) - Main brand color
+- **MindEase Theme**: Soft gradients (Pastel Purple, Blue, Green) for calming effect
+- **Dark Mode**: Deep background (`#0f172a`) with light text for eye comfort
 
-### Typography
-- **Font Family**: Inter (Google Fonts)
-- **Weights**: 300, 400, 500, 600, 700, 800
-
-### Effects
-- Glassmorphism with backdrop blur
-- Smooth transitions (150ms - 350ms)
-- Gradient backgrounds
-- Box shadows with glow effects
-
-## 🔒 Security Best Practices
-
-1. **Never commit `.env` files** - They contain sensitive information
-2. **Use strong JWT secrets** - Generate random, complex strings
-3. **Enable HTTPS in production** - Use SSL certificates
-4. **Implement rate limiting** - Already configured for auth endpoints
-5. **Validate all inputs** - Server-side validation is implemented
-6. **Use httpOnly cookies** - Consider switching from localStorage for tokens
-7. **Regular security audits** - Keep dependencies updated
-
-## 📧 Email Configuration
-
-### Using Gmail
-1. Enable 2-Step Verification in your Google Account
-2. Generate an App Password:
-   - Go to Google Account Settings
-   - Security → 2-Step Verification → App passwords
-   - Generate password for "Mail"
-3. Use the generated password in `EMAIL_PASSWORD`
-
-### Using Other Providers
-Update `EMAIL_HOST` and `EMAIL_PORT` in `.env`:
-- **Outlook**: `smtp-mail.outlook.com:587`
-- **Yahoo**: `smtp.mail.yahoo.com:465`
-- **SendGrid**: `smtp.sendgrid.net:587`
-
-## 🗄️ MongoDB Setup
-
-### Local MongoDB
-```bash
-# Install MongoDB
-# macOS
-brew install mongodb-community
-
-# Ubuntu
-sudo apt-get install mongodb
-
-# Start MongoDB
-mongod
-```
-
-### MongoDB Atlas (Cloud)
-1. Create account at [mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas)
-2. Create a free cluster
-3. Add database user
-4. Whitelist your IP address
-5. Get connection string
-6. Update `MONGODB_URI` in `.env`
-
-## 🚧 Future Enhancements
-
-- [ ] Course creation and management
-- [ ] Video player integration
-- [ ] Payment gateway integration (Stripe/Razorpay)
-- [ ] Student progress tracking
-- [ ] Instructor dashboard
-- [ ] Course reviews and ratings
-- [ ] Discussion forums
-- [ ] Certificates generation
-- [ ] Mobile app (React Native)
+### Tech Stack
+- **Frontend**: React, Vite, Tailwind-like CSS variables
+- **Backend**: Node.js, Express, MongoDB
+- **Templating**: EJS (for Mental Health Module)
+- **Auth**: JWT, Google OAuth
 
 ## 🤝 Contributing
 
@@ -308,12 +207,12 @@ This project is licensed under the ISC License.
 
 ## 👨‍💻 Author
 
-Built with ❤️ for educational purposes
+Built with ❤️ for educational purposes.
 
 ## 🙏 Acknowledgments
 
-- Own Idea and its implementation
-- Icons from Heroicons
+- **MindEase Concept**: Integrated mental wellness for holistic student growth
+- Icons from Heroicons & SVG Repos
 - Images from Unsplash
 - Avatars from DiceBear
 

@@ -1,0 +1,228 @@
+.mindease-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.1) 0%, rgba(125, 211, 252, 0.1) 50%, rgba(134, 239, 172, 0.1) 100%);
+    border: 1.5px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6366f1;
+    overflow: visible;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.mindease-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 1.5px;
+    background: linear-gradient(135deg, #A78BFA, #7DD3FC, #86EFAC);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mindease-button:hover::before {
+    opacity: 1;
+}
+
+.mindease-button:hover {
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.2) 0%, rgba(125, 211, 252, 0.2) 50%, rgba(134, 239, 172, 0.2) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(167, 139, 250, 0.3),
+        0 4px 12px rgba(125, 211, 252, 0.2);
+}
+
+.mindease-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(167, 139, 250, 0.2);
+}
+
+.mindease-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.mindease-button:hover .mindease-logo-wrapper {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.mindease-logo-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 4px rgba(167, 139, 250, 0.3));
+}
+
+.mindease-circle {
+    animation: pulse-circle 3s ease-in-out infinite;
+}
+
+.mindease-lotus {
+    animation: float-lotus 4s ease-in-out infinite;
+}
+
+.mindease-wave {
+    animation: wave-motion 2s ease-in-out infinite;
+}
+
+.mindease-dot {
+    animation: glow-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-circle {
+
+    0%,
+    100% {
+        stroke-opacity: 0.6;
+        transform: scale(1);
+    }
+
+    50% {
+        stroke-opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+@keyframes float-lotus {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: translateY(-2px);
+        opacity: 1;
+    }
+}
+
+@keyframes wave-motion {
+
+    0%,
+    100% {
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dashoffset: 10;
+    }
+}
+
+@keyframes glow-dot {
+
+    0%,
+    100% {
+        opacity: 0.7;
+        filter: drop-shadow(0 0 2px rgba(134, 239, 172, 0.5));
+    }
+
+    50% {
+        opacity: 1;
+        filter: drop-shadow(0 0 6px rgba(134, 239, 172, 0.8));
+    }
+}
+
+.mindease-text {
+    background: linear-gradient(135deg, #A78BFA, #7DD3FC, #86EFAC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+.mindease-button:hover .mindease-text {
+    letter-spacing: 0.5px;
+}
+
+.mindease-tooltip {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.95), rgba(125, 211, 252, 0.95));
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: tooltip-fade-in 0.3s ease;
+    z-index: 1000;
+}
+
+.mindease-tooltip::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid rgba(167, 139, 250, 0.95);
+}
+
+@keyframes tooltip-fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mindease-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .mindease-logo-wrapper {
+        width: 20px;
+        height: 20px;
+    }
+
+    .mindease-text {
+        display: none;
+    }
+
+    .mindease-tooltip {
+        bottom: -35px;
+        font-size: 11px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .mindease-button {
+        background: linear-gradient(135deg, rgba(167, 139, 250, 0.15) 0%, rgba(125, 211, 252, 0.15) 50%, rgba(134, 239, 172, 0.15) 100%);
+    }
+
+    .mindease-button:hover {
+        background: linear-gradient(135deg, rgba(167, 139, 250, 0.25) 0%, rgba(125, 211, 252, 0.25) 50%, rgba(134, 239, 172, 0.25) 100%);
+    }
+}

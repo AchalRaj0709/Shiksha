@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('partials/navbar', { page }) %>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-title">Breathing Exercises</h1>
+                    <p class="page-subtitle">Follow the guided breathing animation to calm your mind and reduce stress.
+                    </p>
+                </div>
+
+                <div class="breathing-container">
+                    <div class="breathing-circle-wrapper">
+                        <div class="breathing-circle" id="breathingCircle">
+                            <div class="breathing-text" id="breathingText">Get Ready</div>
+                        </div>
+                    </div>
+
+                    <div class="breathing-controls">
+                        <button class="btn btn-primary" id="startBtn">Start Breathing</button>
+                        <button class="btn btn-secondary" id="pauseBtn" style="display: none;">Pause</button>
+                        <button class="btn btn-outline" id="resetBtn">Reset</button>
+                    </div>
+
+                    <div class="breathing-info">
+                        <h3>4-7-8 Breathing Technique</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-icon">🌬️</div>
+                                <div class="info-content">
+                                    <strong>Breathe In</strong>
+                                    <p>4 seconds</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">⏸️</div>
+                                <div class="info-content">
+                                    <strong>Hold</strong>
+                                    <p>7 seconds</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">💨</div>
+                                <div class="info-content">
+                                    <strong>Breathe Out</strong>
+                                    <p>8 seconds</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="breathing-benefits">
+                        <h3>Benefits</h3>
+                        <ul>
+                            <li>✓ Reduces anxiety and stress</li>
+                            <li>✓ Improves focus and concentration</li>
+                            <li>✓ Lowers heart rate and blood pressure</li>
+                            <li>✓ Helps you fall asleep faster</li>
+                            <li>✓ Calms the nervous system</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <%- include('partials/footer') %>
+
+            <script src="/js/main.js"></script>
+            <script src="/js/breathing.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+{
+    "meditations": [
+        {
+            "id": 1,
+            "title": "Quick Calm - 5 Minutes",
+            "duration": 5,
+            "description": "A brief guided meditation to center yourself and reduce immediate stress. Perfect for study breaks.",
+            "category": "Quick Relief",
+            "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+            "benefits": [
+                "Reduces anxiety",
+                "Improves focus",
+                "Quick reset"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Focus Meditation - 10 Minutes",
+            "duration": 10,
+            "description": "Enhance your concentration and mental clarity before important study sessions or exams.",
+            "category": "Focus",
+            "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+            "benefits": [
+                "Improves concentration",
+                "Clears mental fog",
+                "Boosts productivity"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Stress Relief - 10 Minutes",
+            "duration": 10,
+            "description": "Release tension and anxiety with this calming guided meditation designed for students.",
+            "category": "Stress Relief",
+            "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+            "benefits": [
+                "Reduces stress",
+                "Promotes relaxation",
+                "Balances emotions"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Deep Relaxation - 15 Minutes",
+            "duration": 15,
+            "description": "A comprehensive meditation session for deep relaxation and mental rejuvenation.",
+            "category": "Deep Relaxation",
+            "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+            "benefits": [
+                "Deep relaxation",
+                "Mental clarity",
+                "Emotional balance"
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Morning Energy - 10 Minutes",
+            "duration": 10,
+            "description": "Start your day with positive energy and mental clarity. Perfect for morning study sessions.",
+            "category": "Energy",
+            "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
+            "benefits": [
+                "Boosts energy",
+                "Positive mindset",
+                "Mental alertness"
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Sleep Preparation - 15 Minutes",
+            "duration": 15,
+            "description": "Wind down after a long day of studying. Prepare your mind and body for restful sleep.",
+            "category": "Sleep",
+            "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3",
+            "benefits": [
+                "Better sleep quality",
+                "Releases tension",
+                "Calms racing thoughts"
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Exam Anxiety Relief - 10 Minutes",
+            "duration": 10,
+            "description": "Specifically designed to calm pre-exam nerves and boost confidence.",
+            "category": "Exam Prep",
+            "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3",
+            "benefits": [
+                "Reduces exam anxiety",
+                "Builds confidence",
+                "Improves performance"
+            ]
+        },
+        {
+            "id": 8,
+            "title": "Body Scan - 15 Minutes",
+            "duration": 15,
+            "description": "Release physical tension from long study sessions with this progressive body scan meditation.",
+            "category": "Physical Relief",
+            "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3",
+            "benefits": [
+                "Releases muscle tension",
+                "Body awareness",
+                "Physical relaxation"
+            ]
+        },
+        {
+            "id": 9,
+            "title": "Mindful Breathing - 5 Minutes",
+            "duration": 5,
+            "description": "Simple breathing exercises to quickly center yourself and regain focus.",
+            "category": "Quick Relief",
+            "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3",
+            "benefits": [
+                "Quick stress relief",
+                "Improved breathing",
+                "Mental clarity"
+            ]
+        },
+        {
+            "id": 10,
+            "title": "Confidence Boost - 10 Minutes",
+            "duration": 10,
+            "description": "Build self-confidence and positive self-image for academic success.",
+            "category": "Motivation",
+            "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3",
+            "benefits": [
+                "Builds confidence",
+                "Positive self-talk",
+                "Motivation"
+            ]
+        }
+    ]
+}

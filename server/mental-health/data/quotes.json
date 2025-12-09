@@ -1,0 +1,279 @@
+{
+    "quotes": [
+        {
+            "id": 1,
+            "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+            "author": "Winston Churchill"
+        },
+        {
+            "id": 2,
+            "text": "Believe you can and you're halfway there.",
+            "author": "Theodore Roosevelt"
+        },
+        {
+            "id": 3,
+            "text": "The only way to do great work is to love what you do.",
+            "author": "Steve Jobs"
+        },
+        {
+            "id": 4,
+            "text": "Education is the most powerful weapon which you can use to change the world.",
+            "author": "Nelson Mandela"
+        },
+        {
+            "id": 5,
+            "text": "The future belongs to those who believe in the beauty of their dreams.",
+            "author": "Eleanor Roosevelt"
+        },
+        {
+            "id": 6,
+            "text": "Don't watch the clock; do what it does. Keep going.",
+            "author": "Sam Levenson"
+        },
+        {
+            "id": 7,
+            "text": "The expert in anything was once a beginner.",
+            "author": "Helen Hayes"
+        },
+        {
+            "id": 8,
+            "text": "You don't have to be great to start, but you have to start to be great.",
+            "author": "Zig Ziglar"
+        },
+        {
+            "id": 9,
+            "text": "Learning is not attained by chance, it must be sought for with ardor and attended to with diligence.",
+            "author": "Abigail Adams"
+        },
+        {
+            "id": 10,
+            "text": "The beautiful thing about learning is that no one can take it away from you.",
+            "author": "B.B. King"
+        },
+        {
+            "id": 11,
+            "text": "Your limitation—it's only your imagination.",
+            "author": "Unknown"
+        },
+        {
+            "id": 12,
+            "text": "Push yourself, because no one else is going to do it for you.",
+            "author": "Unknown"
+        },
+        {
+            "id": 13,
+            "text": "Great things never come from comfort zones.",
+            "author": "Unknown"
+        },
+        {
+            "id": 14,
+            "text": "Dream it. Wish it. Do it.",
+            "author": "Unknown"
+        },
+        {
+            "id": 15,
+            "text": "Success doesn't just find you. You have to go out and get it.",
+            "author": "Unknown"
+        },
+        {
+            "id": 16,
+            "text": "The harder you work for something, the greater you'll feel when you achieve it.",
+            "author": "Unknown"
+        },
+        {
+            "id": 17,
+            "text": "Dream bigger. Do bigger.",
+            "author": "Unknown"
+        },
+        {
+            "id": 18,
+            "text": "Don't stop when you're tired. Stop when you're done.",
+            "author": "Unknown"
+        },
+        {
+            "id": 19,
+            "text": "Wake up with determination. Go to bed with satisfaction.",
+            "author": "Unknown"
+        },
+        {
+            "id": 20,
+            "text": "Do something today that your future self will thank you for.",
+            "author": "Unknown"
+        },
+        {
+            "id": 21,
+            "text": "Little things make big days.",
+            "author": "Unknown"
+        },
+        {
+            "id": 22,
+            "text": "It's going to be hard, but hard does not mean impossible.",
+            "author": "Unknown"
+        },
+        {
+            "id": 23,
+            "text": "Don't wait for opportunity. Create it.",
+            "author": "Unknown"
+        },
+        {
+            "id": 24,
+            "text": "Sometimes we're tested not to show our weaknesses, but to discover our strengths.",
+            "author": "Unknown"
+        },
+        {
+            "id": 25,
+            "text": "The key to success is to focus on goals, not obstacles.",
+            "author": "Unknown"
+        },
+        {
+            "id": 26,
+            "text": "Dream it. Believe it. Build it.",
+            "author": "Unknown"
+        },
+        {
+            "id": 27,
+            "text": "Strive for progress, not perfection.",
+            "author": "Unknown"
+        },
+        {
+            "id": 28,
+            "text": "Don't be afraid to give up the good to go for the great.",
+            "author": "John D. Rockefeller"
+        },
+        {
+            "id": 29,
+            "text": "I find that the harder I work, the more luck I seem to have.",
+            "author": "Thomas Jefferson"
+        },
+        {
+            "id": 30,
+            "text": "Success is walking from failure to failure with no loss of enthusiasm.",
+            "author": "Winston Churchill"
+        },
+        {
+            "id": 31,
+            "text": "The way to get started is to quit talking and begin doing.",
+            "author": "Walt Disney"
+        },
+        {
+            "id": 32,
+            "text": "Don't let yesterday take up too much of today.",
+            "author": "Will Rogers"
+        },
+        {
+            "id": 33,
+            "text": "You learn more from failure than from success. Don't let it stop you. Failure builds character.",
+            "author": "Unknown"
+        },
+        {
+            "id": 34,
+            "text": "It's not whether you get knocked down, it's whether you get up.",
+            "author": "Vince Lombardi"
+        },
+        {
+            "id": 35,
+            "text": "If you are working on something that you really care about, you don't have to be pushed. The vision pulls you.",
+            "author": "Steve Jobs"
+        },
+        {
+            "id": 36,
+            "text": "People who are crazy enough to think they can change the world, are the ones who do.",
+            "author": "Rob Siltanen"
+        },
+        {
+            "id": 37,
+            "text": "Failure will never overtake me if my determination to succeed is strong enough.",
+            "author": "Og Mandino"
+        },
+        {
+            "id": 38,
+            "text": "We may encounter many defeats but we must not be defeated.",
+            "author": "Maya Angelou"
+        },
+        {
+            "id": 39,
+            "text": "Knowing is not enough; we must apply. Wishing is not enough; we must do.",
+            "author": "Johann Wolfgang Von Goethe"
+        },
+        {
+            "id": 40,
+            "text": "Whether you think you can or think you can't, you're right.",
+            "author": "Henry Ford"
+        },
+        {
+            "id": 41,
+            "text": "The two most important days in your life are the day you are born and the day you find out why.",
+            "author": "Mark Twain"
+        },
+        {
+            "id": 42,
+            "text": "Whatever you can do, or dream you can, begin it. Boldness has genius, power and magic in it.",
+            "author": "Johann Wolfgang von Goethe"
+        },
+        {
+            "id": 43,
+            "text": "The best time to plant a tree was 20 years ago. The second best time is now.",
+            "author": "Chinese Proverb"
+        },
+        {
+            "id": 44,
+            "text": "An unexamined life is not worth living.",
+            "author": "Socrates"
+        },
+        {
+            "id": 45,
+            "text": "Eighty percent of success is showing up.",
+            "author": "Woody Allen"
+        },
+        {
+            "id": 46,
+            "text": "Your time is limited, so don't waste it living someone else's life.",
+            "author": "Steve Jobs"
+        },
+        {
+            "id": 47,
+            "text": "Winning isn't everything, but wanting to win is.",
+            "author": "Vince Lombardi"
+        },
+        {
+            "id": 48,
+            "text": "I am not a product of my circumstances. I am a product of my decisions.",
+            "author": "Stephen Covey"
+        },
+        {
+            "id": 49,
+            "text": "Every child is an artist. The problem is how to remain an artist once he grows up.",
+            "author": "Pablo Picasso"
+        },
+        {
+            "id": 50,
+            "text": "You can never cross the ocean until you have the courage to lose sight of the shore.",
+            "author": "Christopher Columbus"
+        },
+        {
+            "id": 51,
+            "text": "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
+            "author": "Maya Angelou"
+        },
+        {
+            "id": 52,
+            "text": "Either you run the day, or the day runs you.",
+            "author": "Jim Rohn"
+        },
+        {
+            "id": 53,
+            "text": "The mind is everything. What you think you become.",
+            "author": "Buddha"
+        },
+        {
+            "id": 54,
+            "text": "The best revenge is massive success.",
+            "author": "Frank Sinatra"
+        },
+        {
+            "id": 55,
+            "text": "Do one thing every day that scares you.",
+            "author": "Eleanor Roosevelt"
+        }
+    ]
+}

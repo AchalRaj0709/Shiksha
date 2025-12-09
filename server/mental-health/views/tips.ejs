@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('partials/navbar', { page }) %>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-title">Study Pressure Management</h1>
+                    <p class="page-subtitle">Use the Pomodoro technique and discover helpful study tips.</p>
+                </div>
+
+                <div class="tips-container">
+                    <!-- Pomodoro Timer Section -->
+                    <div class="pomodoro-section">
+                        <h2>Pomodoro Timer</h2>
+                        <p class="pomodoro-subtitle">25 minutes of focused work, 5 minutes of rest</p>
+
+                        <div class="timer-display">
+                            <div class="timer-circle">
+                                <svg class="timer-svg" width="200" height="200">
+                                    <circle cx="100" cy="100" r="90" fill="none" stroke="#e2e8f0" stroke-width="8" />
+                                    <circle id="timerProgress" cx="100" cy="100" r="90" fill="none"
+                                        stroke="url(#timer-gradient)" stroke-width="8" stroke-linecap="round" />
+                                    <defs>
+                                        <linearGradient id="timer-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#A78BFA" />
+                                            <stop offset="50%" stop-color="#7DD3FC" />
+                                            <stop offset="100%" stop-color="#86EFAC" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="timer-text">
+                                    <div class="timer-time" id="timerDisplay">25:00</div>
+                                    <div class="timer-label" id="timerLabel">Focus Time</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timer-controls">
+                            <button class="btn btn-primary" id="startTimer">Start</button>
+                            <button class="btn btn-secondary" id="pauseTimer" style="display: none;">Pause</button>
+                            <button class="btn btn-outline" id="resetTimer">Reset</button>
+                        </div>
+
+                        <div class="timer-stats">
+                            <div class="stat-item">
+                                <span class="stat-value" id="completedPomodoros">0</span>
+                                <span class="stat-label">Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="totalFocusTime">0</span>
+                                <span class="stat-label">Total Minutes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Study Tips Section -->
+                    <div class="tips-header">
+                        <h2>Study Tips</h2>
+                        <button class="btn btn-outline" id="shuffleTips">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z" />
+                            </svg>
+                            Shuffle Tips
+                        </button>
+                    </div>
+
+                    <div class="tips-grid" id="tipsGrid">
+                        <% tips.forEach(function(tip) { %>
+                            <div class="tip-card" data-category="<%= tip.category %>">
+                                <div class="tip-icon">
+                                    <%= tip.icon %>
+                                </div>
+                                <div class="tip-category">
+                                    <%= tip.category %>
+                                </div>
+                                <h3 class="tip-title">
+                                    <%= tip.title %>
+                                </h3>
+                                <p class="tip-description">
+                                    <%= tip.description %>
+                                </p>
+                            </div>
+                            <% }); %>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <%- include('partials/footer') %>
+
+            <script src="/js/main.js"></script>
+            <script src="/js/tips.js"></script>
+</body>
+
+</html>

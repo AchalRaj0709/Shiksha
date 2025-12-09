@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('partials/navbar', { page }) %>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-title">Welcome to Your Wellness Space</h1>
+                    <p class="page-subtitle">Take a moment for yourself. Choose an activity to support your mental
+                        wellbeing.</p>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Breathing Exercises Card -->
+                    <a href="/wellbeing/breathing" class="feature-card breathing-card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" fill="none" />
+                                <path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <h2 class="card-title">Breathing Exercises</h2>
+                        <p class="card-description">Guided breathing techniques to calm your mind and reduce stress
+                            instantly.</p>
+                        <div class="card-footer">
+                            <span class="card-duration">⏱️ 2-5 minutes</span>
+                            <span class="card-arrow">→</span>
+                        </div>
+                    </a>
+
+                    <!-- Meditation Card -->
+                    <a href="/wellbeing/meditation" class="feature-card meditation-card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C12 2 8 6 8 12C8 15 10 17 12 17C14 17 16 15 16 12C16 6 12 2 12 2Z"
+                                    fill="currentColor" />
+                                <circle cx="12" cy="20" r="2" fill="currentColor" />
+                            </svg>
+                        </div>
+                        <h2 class="card-title">Mindfulness & Meditation</h2>
+                        <p class="card-description">Audio-guided meditation sessions to help you relax and refocus.</p>
+                        <div class="card-footer">
+                            <span class="card-duration">⏱️ 5-15 minutes</span>
+                            <span class="card-arrow">→</span>
+                        </div>
+                    </a>
+
+                    <!-- Study Tips Card -->
+                    <a href="/wellbeing/tips" class="feature-card tips-card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </div>
+                        <h2 class="card-title">Study Pressure Management</h2>
+                        <p class="card-description">Practical tips and Pomodoro timer to manage study stress
+                            effectively.</p>
+                        <div class="card-footer">
+                            <span class="card-duration">📚 30 tips</span>
+                            <span class="card-arrow">→</span>
+                        </div>
+                    </a>
+
+                    <!-- Motivational Resources Card -->
+                    <a href="/wellbeing/quotes" class="feature-card quotes-card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 21C3 17.5 5 15 9 15C9 12 7 10 3 10V3C10 3 15 8 15 15V21H3Z"
+                                    fill="currentColor" />
+                                <path d="M15 21C15 17.5 17 15 21 15C21 12 19 10 15 10V3C22 3 27 8 27 15V21H15Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </div>
+                        <h2 class="card-title">Motivational Resources</h2>
+                        <p class="card-description">Inspiring quotes and affirmations to boost your confidence and
+                            motivation.</p>
+                        <div class="card-footer">
+                            <span class="card-duration">✨ 55+ quotes</span>
+                            <span class="card-arrow">→</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="stats-section">
+                    <div class="stat-card">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Wellness Tools</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Meditation Sessions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">30</div>
+                        <div class="stat-label">Study Tips</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">55+</div>
+                        <div class="stat-label">Motivational Quotes</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <%- include('partials/footer') %>
+
+            <script src="/js/main.js"></script>
+</body>
+
+</html>
