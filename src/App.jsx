@@ -6,7 +6,7 @@ import { CartProvider } from './context/CartContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AuthModal from './components/AuthModal';
-import AIAssistantButton from './components/AIAssistantButton';
+
 import Home from './pages/Home';
 import CourseDetails from './components/CourseDetails';
 import MyLearning from './pages/MyLearning';
@@ -16,6 +16,7 @@ import Payment from './pages/Payment';
 import Cart from './pages/Cart';
 import AccountSettings from './pages/AccountSettings';
 import './App.css';
+import ChatbotUI from './components/ChatbotUI';
 
 function App() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -56,7 +57,7 @@ function App() {
                 onClose={handleCloseAuth}
                 initialMode={authMode}
               />
-              <AIAssistantButton />
+              <ChatbotUI />
             </div>
           </Router>
         </CartProvider>
