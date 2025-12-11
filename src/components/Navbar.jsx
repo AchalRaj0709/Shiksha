@@ -5,6 +5,7 @@ import { courseAPI } from '../utils/api';
 import logo from '../assets/shiksha_logo.png';
 import MindEaseButton from './MindEaseButton';
 import './Navbar.css';
+import { ShoppingCart } from 'lucide-react';
 
 function Navbar({ onOpenAuth }) {
     const [showProfileMenu, setShowProfileMenu] = useState(false);
@@ -227,9 +228,7 @@ function Navbar({ onOpenAuth }) {
                                 title="Shopping Cart"
                                 onClick={() => window.location.href = '/cart'}
                             >
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M9 2L7 6M17 2l2 4M3 6h18M5 6l2 14h10l2-14M10 10v6M14 10v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                                </svg>
+                                <ShoppingCart />
                                 {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
                             </button>
 
