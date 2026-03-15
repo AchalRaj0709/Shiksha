@@ -5,8 +5,9 @@ const MindEaseButton = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     const handleClick = () => {
-        // Navigate to MindEase mental health module
-        window.location.href = 'http://localhost:3001/wellbeing';
+        // Navigate to MindEase mental health module using environment variable or fallback to local
+        const mentalHealthUrl = import.meta.env.VITE_MENTAL_HEALTH_URL || 'http://localhost:3001';
+        window.location.href = `${mentalHealthUrl}/wellbeing`;
     };
 
     return (

@@ -1,6 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import helmet from 'helmet';
+import compression from 'compression';
 import connectDB from './config/db.js';
 import authRoutes from './routes/auth.js';
 import courseRoutes from './routes/courses.js';
@@ -25,6 +27,12 @@ const allowedOrigins = [
     'http://localhost:5173',
     'http://localhost:5174', // Vite sometimes uses this
 ];
+
+// Apply standard security headers
+app.use(helmet());
+
+// Compress API responses
+app.use(compression());
 
 app.use(cors({
     origin: function (origin, callback) {
